@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Numerics;
 using Windows.UI;
 using Windows.UI.Composition;
@@ -16,6 +17,9 @@ namespace MaterialDemo.Uwp.Lights
 
         protected override void OnConnected(UIElement targetElement)
         {
+            if (targetElement == null)
+                return;
+
             Compositor compositor = Window.Current.Compositor;
 
             // Create SpotLight and set its properties
@@ -87,14 +91,21 @@ namespace MaterialDemo.Uwp.Lights
             // Dispose Light and Composition resources when it is removed from the tree
             RemoveTargetElement(GetId(), oldElement);
 
-            CompositionLight?.Dispose();
-            CompositionLight = null;
+            try
+            {
+                _lightPositionExpression?.Dispose();
+                _lightPositionExpression = null;
 
-            _lightPositionExpression?.Dispose();
-            _lightPositionExpression = null;
+                _offsetAnimation?.Dispose();
+                _offsetAnimation = null;
 
-            _offsetAnimation?.Dispose();
-            _offsetAnimation = null;
+                CompositionLight?.Dispose();
+                CompositionLight = null; // AccessViolationException (run app, go to Lights page, navigate back to MainPage)
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"HoverLight OnDisconnect Exception: {ex}");
+            }
         }
 
         protected override string GetId() => typeof(HoverLight).FullName;

@@ -29,7 +29,7 @@ namespace MaterialDemo.Uwp.Brushes
             }
 
             // Load NormalMap onto an ICompositionSurface using LoadedImageSurface
-            _surface = LoadedImageSurface.StartLoadFromUri(new Uri("ms-appx:///Images/Brick_NormalMap.jpg"), new Size(400, 400));
+            _surface = LoadedImageSurface.StartLoadFromUri(new Uri("ms-appx:///Images/Brick_NormalMap.jpg"), new Size(580, 387));
 
             // Load Surface onto SurfaceBrush
             CompositionSurfaceBrush normalMap = compositor.CreateSurfaceBrush(_surface);

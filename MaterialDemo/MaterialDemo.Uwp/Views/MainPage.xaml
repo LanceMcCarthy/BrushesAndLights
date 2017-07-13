@@ -1,0 +1,32 @@
+﻿<Page x:Class="MaterialDemo.Uwp.Views.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:MaterialDemo.Uwp"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:brushes="using:MaterialDemo.Uwp.Brushes"
+      xmlns:lights="using:MaterialDemo.Uwp.Lights"
+      mc:Ignorable="d">
+
+    <Grid x:Name="RootGrid">
+        <Grid.Background>
+            <brushes:HostBackdropEffectBrush />
+        </Grid.Background>
+
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <StackPanel.Background>
+                <brushes:BackdropTintBlurBrush />
+            </StackPanel.Background>
+
+            <Button Content="See Brushes Demo"
+                    Click="BrushesDemoButton_OnClick"
+                    HorizontalAlignment="Stretch"
+                    Margin="10" />
+            <Button Content="See Lights Demo"
+                    Click="LightsDemoButton_OnClick"
+                    HorizontalAlignment="Stretch"
+                    Margin="10" />
+        </StackPanel>
+    </Grid>
+</Page>

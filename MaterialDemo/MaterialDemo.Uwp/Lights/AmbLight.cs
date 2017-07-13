@@ -9,6 +9,9 @@ namespace MaterialDemo.Uwp.Lights
     {
         protected override void OnConnected(UIElement newElement)
         {
+            if (newElement == null)
+                return;
+
             Compositor compositor = Window.Current.Compositor;
 
             // Create AmbientLight and set its properties
