@@ -38,7 +38,7 @@ namespace MaterialDemo.Uwp.Lights
             _offsetAnimation.Duration = TimeSpan.FromSeconds(0.5f);
 
             spotLight.Offset = restingPosition;
-
+            
             // Define expression animation that relates light's offset to pointer position 
             CompositionPropertySet hoverPosition = ElementCompositionPreview.GetPointerPositionPropertySet(targetElement);
             _lightPositionExpression = compositor.CreateExpressionAnimation("Vector3(hover.Position.X, hover.Position.Y, height)");

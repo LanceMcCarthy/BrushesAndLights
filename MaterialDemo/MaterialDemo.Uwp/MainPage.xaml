@@ -8,8 +8,10 @@
       xmlns:lights="using:MaterialDemo.Uwp.Lights"
       mc:Ignorable="d">
 
-    <Grid x:Name="RootGrid"
-          Background="White">
+    <Grid x:Name="RootGrid">
+        <Grid.Background>
+            <brushes:HostBackdropEffectBrush/>
+        </Grid.Background>
         <Grid x:Name="XamlLightsGrid"
               Width="300"
               Height="300"
