@@ -1,4 +1,5 @@
 ﻿using System;
+using Windows.ApplicationModel;
 using Windows.Foundation;
 using Windows.UI;
 using Windows.UI.Composition;
@@ -15,6 +16,9 @@ namespace MaterialDemo.Uwp.Brushes
 
         protected override void OnConnected()
         {
+            if (DesignMode.DesignModeEnabled)
+                return;
+
             Compositor compositor = Window.Current.Compositor;
 
             // CompositionCapabilities: Are Effects supported?

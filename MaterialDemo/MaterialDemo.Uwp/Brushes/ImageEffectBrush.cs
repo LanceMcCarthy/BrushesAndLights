@@ -1,4 +1,5 @@
 ﻿using System;
+using Windows.ApplicationModel;
 using Windows.Graphics.Effects;
 using Windows.UI.Composition;
 using Windows.UI.Xaml;
@@ -40,7 +41,7 @@ namespace MaterialDemo.Uwp.Brushes
         protected override void OnConnected()
         {
             // return if Uri String is null or empty
-            if (string.IsNullOrEmpty(ImageUriString))
+            if (string.IsNullOrEmpty(ImageUriString) || DesignMode.DesignModeEnabled)
                 return;
 
             // Get a reference to the Compositor

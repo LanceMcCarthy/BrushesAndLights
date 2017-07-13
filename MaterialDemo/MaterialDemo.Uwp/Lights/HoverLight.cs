@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Numerics;
+using Windows.ApplicationModel;
 using Windows.UI;
 using Windows.UI.Composition;
 using Windows.UI.Xaml;
@@ -17,7 +18,7 @@ namespace MaterialDemo.Uwp.Lights
 
         protected override void OnConnected(UIElement targetElement)
         {
-            if (targetElement == null)
+            if (targetElement == null || DesignMode.DesignModeEnabled)
                 return;
 
             Compositor compositor = Window.Current.Compositor;

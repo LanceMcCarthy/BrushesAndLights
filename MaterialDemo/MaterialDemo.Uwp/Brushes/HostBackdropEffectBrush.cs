@@ -1,4 +1,5 @@
 ﻿using System;
+using Windows.ApplicationModel;
 using Windows.UI;
 using Windows.UI.Composition;
 using Windows.UI.Xaml;
@@ -33,6 +34,9 @@ namespace MaterialDemo.Uwp.Brushes
 
         protected override void OnConnected()
         {
+            if (DesignMode.DesignModeEnabled)
+                return;
+
             Compositor compositor = Window.Current.Compositor;
 
             // CompositionCapabilities: Are HostBackdrop Effects supported?

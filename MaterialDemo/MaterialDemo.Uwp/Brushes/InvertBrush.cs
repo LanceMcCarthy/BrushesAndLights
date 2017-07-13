@@ -1,4 +1,5 @@
-﻿using Windows.UI.Composition;
+﻿using Windows.ApplicationModel;
+using Windows.UI.Composition;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 using Microsoft.Graphics.Canvas.Effects;
@@ -9,6 +10,9 @@ namespace MaterialDemo.Uwp.Brushes
     {
         protected override void OnConnected()
         {
+            if (DesignMode.DesignModeEnabled)
+                return;
+
             if (CompositionBrush == null)
             {
                 // 1 - Get the BackdropBrush, this gets the pixels behind the UI element 

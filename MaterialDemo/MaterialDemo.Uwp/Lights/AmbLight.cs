@@ -1,4 +1,5 @@
-﻿using Windows.UI;
+﻿using Windows.ApplicationModel;
+using Windows.UI;
 using Windows.UI.Composition;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
@@ -9,7 +10,7 @@ namespace MaterialDemo.Uwp.Lights
     {
         protected override void OnConnected(UIElement newElement)
         {
-            if (newElement == null)
+            if (newElement == null || DesignMode.DesignModeEnabled)
                 return;
 
             Compositor compositor = Window.Current.Compositor;
