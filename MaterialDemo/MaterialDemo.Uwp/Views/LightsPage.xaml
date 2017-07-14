@@ -18,7 +18,8 @@
 
             <Grid.Background>
                 <!-- Open MaterialBrush.cs and see how LoadedImageSurface uses a NormalMap jpg image for the lighting -->
-                <brushes:MaterialBrush />
+                <!--<brushes:MaterialBrush />-->
+                <brushes:CobblestoneMaterialBrush/>
             </Grid.Background>
 
             <Grid.Lights>

@@ -1,1 +1,202 @@
-{"Layers":[{"__type":"LightingLayer:#CompositionSampleGallery","BlendMode":"Normal","Description":"NormalMapLightingLayer","Effects":[],"Enabled":true,"Opacity":1,"EdgeMode":0,"FilePath":"C:\\Users\\lance\\Downloads\\Cobble_NormalMap.jpg","Properties":[{"Key":"Offset","Value":"0,0"},{"Key":"Scale","Value":"1,1"},{"Key":"RotationAngleInDegrees","Value":"0"},{"Key":"AnchorPoint","Value":"0,0"},{"Key":"Stretch","Value":"Uniform"},{"Key":"HorizontalAlignmentRatio","Value":"0.5"},{"Key":"VerticalAlignmentRatio","Value":"0.5"},{"Key":"ExtendX","Value":"Clamp"},{"Key":"ExtendY","Value":"Clamp"},{"Key":"LeftInset","Value":"0"},{"Key":"TopInset","Value":"0"},{"Key":"RightInset","Value":"0"},{"Key":"BottomInset","Value":"0"},{"Key":"LeftInsetScale","Value":"1"},{"Key":"TopInsetScale","Value":"1"},{"Key":"RightInsetScale","Value":"1"},{"Key":"BottomInsetScale","Value":"1"},{"Key":"IsCenterHollow","Value":"False"},{"Key":"AmbientAmount","Value":"0.3"},{"Key":"DiffuseAmount","Value":"1"},{"Key":"SpecularAmount","Value":"0.2"},{"Key":"SpecularShine","Value":"16"},{"Key":"BrdfType","Value":"BlinnPhong"}]}],"Lights":[{"Enabled":true,"Name":"Point Light","Offset":{"X":348.5,"Y":263,"Z":100},"Properties":[{"Key":"QuadraticAttenuation","Value":"0"},{"Key":"LinearAttenuation","Value":"0"},{"Key":"ConstantAttenuation","Value":"1"},{"Key":"Color","Value":"#FFFEFFED"},{"Key":"Intensity","Value":"0.96"}],"Type":0},{"Enabled":true,"Name":"Spot Light","Offset":{"X":348.5,"Y":263,"Z":100},"Properties":[{"Key":"LinearAttenuation","Value":"0"},{"Key":"InnerConeColor","Value":"#FFFFFFFF"},{"Key":"OuterConeAngle","Value":"1.012291"},{"Key":"InnerConeAngleInDegrees","Value":"21"},{"Key":"InnerConeAngle","Value":"0.3665192"},{"Key":"Direction","Value":"0,0,-1"},{"Key":"ConstantAttenuation","Value":"1"},{"Key":"QuadraticAttenuation","Value":"0"},{"Key":"OuterConeColor","Value":"#FFFDFFF2"},{"Key":"OuterConeAngleInDegrees","Value":"58"},{"Key":"InnerConeIntensity","Value":"0.5"},{"Key":"OuterConeIntensity","Value":"0.64"}],"Type":1}]}
+{
+  "Layers": [
+    {
+      "__type": "LightingLayer:#CompositionSampleGallery",
+      "BlendMode": "Normal",
+      "Description": "NormalMapLightingLayer",
+      "Effects": [],
+      "Enabled": true,
+      "Opacity": 1,
+      "EdgeMode": 0,
+      "FilePath": "C:\\Users\\lance\\Downloads\\Cobble_NormalMap.jpg",
+      "Properties": [
+        {
+          "Key": "Offset",
+          "Value": "0,0"
+        },
+        {
+          "Key": "Scale",
+          "Value": "1,1"
+        },
+        {
+          "Key": "RotationAngleInDegrees",
+          "Value": "0"
+        },
+        {
+          "Key": "AnchorPoint",
+          "Value": "0,0"
+        },
+        {
+          "Key": "Stretch",
+          "Value": "Uniform"
+        },
+        {
+          "Key": "HorizontalAlignmentRatio",
+          "Value": "0.5"
+        },
+        {
+          "Key": "VerticalAlignmentRatio",
+          "Value": "0.5"
+        },
+        {
+          "Key": "ExtendX",
+          "Value": "Clamp"
+        },
+        {
+          "Key": "ExtendY",
+          "Value": "Clamp"
+        },
+        {
+          "Key": "LeftInset",
+          "Value": "0"
+        },
+        {
+          "Key": "TopInset",
+          "Value": "0"
+        },
+        {
+          "Key": "RightInset",
+          "Value": "0"
+        },
+        {
+          "Key": "BottomInset",
+          "Value": "0"
+        },
+        {
+          "Key": "LeftInsetScale",
+          "Value": "1"
+        },
+        {
+          "Key": "TopInsetScale",
+          "Value": "1"
+        },
+        {
+          "Key": "RightInsetScale",
+          "Value": "1"
+        },
+        {
+          "Key": "BottomInsetScale",
+          "Value": "1"
+        },
+        {
+          "Key": "IsCenterHollow",
+          "Value": "False"
+        },
+        {
+          "Key": "AmbientAmount",
+          "Value": "0.3"
+        },
+        {
+          "Key": "DiffuseAmount",
+          "Value": "1"
+        },
+        {
+          "Key": "SpecularAmount",
+          "Value": "0.2"
+        },
+        {
+          "Key": "SpecularShine",
+          "Value": "16"
+        },
+        {
+          "Key": "BrdfType",
+          "Value": "BlinnPhong"
+        }
+      ]
+    }
+  ],
+  "Lights": [
+    {
+      "Enabled": true,
+      "Name": "Point Light",
+      "Offset": {
+        "X": 348.5,
+        "Y": 263,
+        "Z": 100
+      },
+      "Properties": [
+        {
+          "Key": "QuadraticAttenuation",
+          "Value": "0"
+        },
+        {
+          "Key": "LinearAttenuation",
+          "Value": "0"
+        },
+        {
+          "Key": "ConstantAttenuation",
+          "Value": "1"
+        },
+        {
+          "Key": "Color",
+          "Value": "#FFFEFFED"
+        },
+        {
+          "Key": "Intensity",
+          "Value": "0.96"
+        }
+      ],
+      "Type": 0
+    },
+    {
+      "Enabled": true,
+      "Name": "Spot Light",
+      "Offset": {
+        "X": 348.5,
+        "Y": 263,
+        "Z": 100
+      },
+      "Properties": [
+        {
+          "Key": "LinearAttenuation",
+          "Value": "0"
+        },
+        {
+          "Key": "InnerConeColor",
+          "Value": "#FFFFFFFF"
+        },
+        {
+          "Key": "OuterConeAngle",
+          "Value": "1.012291"
+        },
+        {
+          "Key": "InnerConeAngleInDegrees",
+          "Value": "21"
+        },
+        {
+          "Key": "InnerConeAngle",
+          "Value": "0.3665192"
+        },
+        {
+          "Key": "Direction",
+          "Value": "0,0,-1"
+        },
+        {
+          "Key": "ConstantAttenuation",
+          "Value": "1"
+        },
+        {
+          "Key": "QuadraticAttenuation",
+          "Value": "0"
+        },
+        {
+          "Key": "OuterConeColor",
+          "Value": "#FFFDFFF2"
+        },
+        {
+          "Key": "OuterConeAngleInDegrees",
+          "Value": "58"
+        },
+        {
+          "Key": "InnerConeIntensity",
+          "Value": "0.5"
+        },
+        {
+          "Key": "OuterConeIntensity",
+          "Value": "0.64"
+        }
+      ],
+      "Type": 1
+    }
+  ]
+}

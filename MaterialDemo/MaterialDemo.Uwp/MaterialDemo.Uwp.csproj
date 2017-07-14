@@ -96,11 +96,13 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Brushes\BackdropTintBlurBrush.cs" />
+    <Compile Include="Brushes\CobblestoneMaterialBrush.cs" />
     <Compile Include="Brushes\HostBackdropEffectBrush.cs" />
     <Compile Include="Brushes\ImageEffectBrush.cs" />
     <Compile Include="Brushes\InvertBrush.cs" />
     <Compile Include="Brushes\MaterialBrush.cs" />
     <Compile Include="Lights\AmbLight.cs" />
+    <Compile Include="Lights\CobblestoneLight.cs" />
     <Compile Include="Lights\HoverLight.cs" />
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
