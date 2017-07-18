@@ -32,8 +32,10 @@ namespace MaterialDemo.Uwp.Brushes
                 return;
             }
 
+            // Brick dimensions: new Size(580, 387)
+            // Cobble dimensions: new Size(512, 384)
             // Load NormalMap onto an ICompositionSurface using LoadedImageSurface
-            _surface = LoadedImageSurface.StartLoadFromUri(new Uri("ms-appx:///Images/Brick_NormalMap.jpg"), new Size(580, 387));
+            _surface = LoadedImageSurface.StartLoadFromUri(new Uri("ms-appx:///Images/Cobble_NormalMap.jpg"), new Size(512, 384));
 
             // Load Surface onto SurfaceBrush
             CompositionSurfaceBrush normalMap = compositor.CreateSurfaceBrush(_surface);

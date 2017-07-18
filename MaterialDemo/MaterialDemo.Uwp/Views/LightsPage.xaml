@@ -9,17 +9,20 @@
     xmlns:lights="using:MaterialDemo.Uwp.Lights"
     mc:Ignorable="d">
 
-    <Grid Background="Gray">
+    <Grid>
+        <Grid.Background>
+            <brushes:HostBackdropEffectBrush />
+        </Grid.Background>
         <Grid x:Name="XamlLightsGrid"
-              Width="580"
-              Height="387"
+              Width="512"
+              Height="384"
               HorizontalAlignment="Center"
               VerticalAlignment="Center">
 
             <Grid.Background>
                 <!-- Open MaterialBrush.cs and see how LoadedImageSurface uses a NormalMap jpg image for the lighting -->
-                <!--<brushes:MaterialBrush />-->
-                <brushes:CobblestoneMaterialBrush/>
+                <brushes:MaterialBrush />
+                <!--<brushes:CobblestoneMaterialBrush/>-->
             </Grid.Background>
 
             <Grid.Lights>
