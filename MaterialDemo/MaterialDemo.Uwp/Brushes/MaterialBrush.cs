@@ -13,6 +13,32 @@ namespace MaterialDemo.Uwp.Brushes
     public sealed class MaterialBrush : XamlCompositionBrushBase
     {
         private LoadedImageSurface _surface;
+        private CompositionSurfaceBrush _normalMap;
+
+        public static readonly DependencyProperty ImageUriStringProperty = DependencyProperty.Register(
+            "ImageUri",
+            typeof(string),
+            typeof(MaterialBrush),
+            new PropertyMetadata(string.Empty, OnImageUriStringChanged)
+        );
+
+        public string ImageUriString
+        {
+            get => (String)GetValue(ImageUriStringProperty);
+            set => SetValue(ImageUriStringProperty, value);
+        }
+
+        private static void OnImageUriStringChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var materialBrush = (MaterialBrush)d;
+            // Unbox and update surface if CompositionBrush exists     
+            if (materialBrush._normalMap != null)
+            {
+                var newSurface = LoadedImageSurface.StartLoadFromUri(new Uri((String)e.NewValue));
+                materialBrush._surface = newSurface;
+                materialBrush._normalMap.Surface = newSurface;
+            }
+        }
 
         protected override void OnConnected()
         {
@@ -31,15 +57,14 @@ namespace MaterialDemo.Uwp.Brushes
                 CompositionBrush = compositor.CreateColorBrush(FallbackColor);
                 return;
             }
-
-            // Brick dimensions: new Size(580, 387)
-            // Cobble dimensions: new Size(512, 384)
+            
+            // BrokenGlass 512x384
             // Load NormalMap onto an ICompositionSurface using LoadedImageSurface
-            _surface = LoadedImageSurface.StartLoadFromUri(new Uri("ms-appx:///Images/Cobble_NormalMap.jpg"), new Size(512, 384));
+            _surface = LoadedImageSurface.StartLoadFromUri(new Uri("ms-appx:///Images/Brick_NormalMap.jpg"), new Size(512, 384));
 
             // Load Surface onto SurfaceBrush
-            CompositionSurfaceBrush normalMap = compositor.CreateSurfaceBrush(_surface);
-            normalMap.Stretch = CompositionStretch.Uniform;
+            _normalMap = compositor.CreateSurfaceBrush(_surface);
+            _normalMap.Stretch = CompositionStretch.Uniform;
 
             // Define Effect graph
             const float glassLightAmount = 0.5f;
@@ -88,7 +113,7 @@ namespace MaterialDemo.Uwp.Brushes
             CompositionBackdropBrush backdrop = compositor.CreateBackdropBrush();
 
             // Set Sources to Effect
-            effectBrush.SetSourceParameter("NormalMap", normalMap);
+            effectBrush.SetSourceParameter("NormalMap", _normalMap);
             effectBrush.SetSourceParameter("Backdrop", backdrop);
 
             // Set EffectBrush as the brush that XamlCompBrushBase paints onto Xaml UIElement

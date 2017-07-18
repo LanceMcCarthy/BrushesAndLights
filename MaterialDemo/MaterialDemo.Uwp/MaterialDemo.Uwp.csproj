@@ -96,7 +96,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Brushes\BackdropTintBlurBrush.cs" />
-    <Compile Include="Brushes\CobblestoneMaterialBrush.cs" />
     <Compile Include="Brushes\HostBackdropEffectBrush.cs" />
     <Compile Include="Brushes\ImageEffectBrush.cs" />
     <Compile Include="Brushes\InvertBrush.cs" />
@@ -126,8 +125,8 @@
   <ItemGroup>
     <Content Include="Images\Background.png" />
     <Content Include="Images\Brick_NormalMap.jpg" />
+    <Content Include="Images\BrokenGlass_NormalMap.png" />
     <Content Include="Images\Cobble_NormalMap.jpg" />
-    <Content Include="Images\Ripples_NormalMap.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
