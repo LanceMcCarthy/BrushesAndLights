@@ -29,6 +29,7 @@
             </ComboBox.Header>
         </ComboBox>
         
+        
         <Grid x:Name="XamlLightsGrid"
               Width="512"
               Height="384"
@@ -36,8 +37,7 @@
               VerticalAlignment="Center">
 
             <Grid.Background>
-                <brushes:MaterialBrush x:Name="materialBrush"
-                                       ImageUriString="ms-appx:///Images/Brick_NormalMap.jpg" />
+                <brushes:MaterialBrush x:Name="materialBrush" />
             </Grid.Background>
 
             <Grid.Lights>

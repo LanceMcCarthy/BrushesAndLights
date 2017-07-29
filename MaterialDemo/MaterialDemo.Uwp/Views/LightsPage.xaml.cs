@@ -12,9 +12,8 @@ namespace MaterialDemo.Uwp.Views
 
             MapsComboBox.ItemsSource = new List<NormalMapItem>
             {
-                new NormalMapItem {Name = "Brick", ImageUriString = "ms-appx:///Images/Brick_NormalMap.jpg"},
-                new NormalMapItem {Name = "Broken Glass", ImageUriString = "ms-appx:///Images/BrokenGlass_NormalMap.png"},
-                new NormalMapItem {Name = "Cobblestone", ImageUriString = "ms-appx:///Images/Cobble_NormalMap.jpg"}
+                new NormalMapItem {Name = "Texture", ImageUriString = "ms-appx:///Images/NormalMap.png"},
+                new NormalMapItem {Name = "Broken Glass", ImageUriString = "ms-appx:///Images/BrokenGlass_NormalMap.png"}
             };
 
             MapsComboBox.SelectedIndex = 0;

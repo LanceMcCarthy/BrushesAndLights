@@ -119,14 +119,11 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="MaterialDemo.Uwp_TemporaryKey.pfx" />
-    <None Include="MaterialEditor\CobbleStoneMaterial.json" />
-    <None Include="MaterialEditor\NightTimeBrick.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Background.png" />
-    <Content Include="Images\Brick_NormalMap.jpg" />
     <Content Include="Images\BrokenGlass_NormalMap.png" />
-    <Content Include="Images\Cobble_NormalMap.jpg" />
+    <Content Include="Images\NormalMap.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

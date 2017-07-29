@@ -59,8 +59,8 @@ namespace MaterialDemo.Uwp.Brushes
             }
             
             // BrokenGlass 512x384
-            // Load NormalMap onto an ICompositionSurface using LoadedImageSurface
-            _surface = LoadedImageSurface.StartLoadFromUri(new Uri("ms-appx:///Images/Brick_NormalMap.jpg"), new Size(512, 384));
+            // Load NormalMap onto an ICompositionSurface using LoadedImageSurface, new Size(512, 384)
+            _surface = LoadedImageSurface.StartLoadFromUri(new Uri("ms-appx:///Images/NormalMap.png"));
 
             // Load Surface onto SurfaceBrush
             _normalMap = compositor.CreateSurfaceBrush(_surface);
